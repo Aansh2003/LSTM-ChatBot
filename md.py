@@ -1,27 +1,11 @@
-import nltk
-from nltk.stem.porter import PorterStemmer
 import torch
 from torch import nn
 
-stemmer = PorterStemmer()
+if torch.cuda.is_available():
+	device = 'cuda'
+else:
+	device = 'cpu'
 
-class Net(nn.Module):
-    def __init__(self,input,output,hidden):
-        super(Net,self).__init__()
-        self.l1 = nn.Linear(in_features=input,out_features=hidden)
-        self.l2 = nn.Linear(in_features=hidden,out_features=hidden)
-        self.l3 = nn.Linear(in_features=hidden,out_features=output)
-        self.relu = nn.LeakyReLU()
-
-    def forward(self,x):
-        out = self.l1(x)
-        out = self.relu(out)
-        out = self.l2(out)
-        out = self.relu(out)
-        out = self.l3(out)
-
-        return out
-    
 class Classifier_net(nn.ModuleList):
 	def __init__(self, input,output,hidden,batch,lstm):
 		super(Classifier_net, self).__init__()
@@ -40,8 +24,8 @@ class Classifier_net(nn.ModuleList):
 		self.fc2 = nn.Linear(self.hidden_dim*2, output)
 		
 	def forward(self, x):
-		h = torch.zeros((self.LSTM_layers, x.size(0), self.hidden_dim)).to('cuda')
-		c = torch.zeros((self.LSTM_layers, x.size(0), self.hidden_dim)).to('cuda')
+		h = torch.zeros((self.LSTM_layers, x.size(0), self.hidden_dim)).to(device)
+		c = torch.zeros((self.LSTM_layers, x.size(0), self.hidden_dim)).to(device)
 
 		torch.nn.init.xavier_normal_(h)
 		torch.nn.init.xavier_normal_(c)
