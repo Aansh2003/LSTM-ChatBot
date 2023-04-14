@@ -1,28 +1,29 @@
 # LSTM Based NLU chatbot with randomized responses
 
 ## Installing dependencies
+
 Install pandas and numpy for dataframe and mathenatical features
-'''
+```
 pip3 install pandas
 pip3 install numpy
-'''
+```
 
 Install PyTorch for model support
-'''
+```
 pip3 install torch torchvision torchaudio
-'''
+```
 
 Install keras for preprocessing
-'''
+```
 pip3 install keras
 pip3 install Keras-Preprocessing
-'''
+```
 
 Installing BeautifulSoup for HTML parsing and JamSpell for spell-check
-'''
+```
 pip3 install beautifulsoup4
 pip3 install jamspell
-'''
+```
 All required dependencies have now been installed.
 
 ## Running the model
