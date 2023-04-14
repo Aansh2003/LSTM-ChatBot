@@ -4,7 +4,7 @@ This is a chatbot designed to classify inputs and generate apt outputs using Nat
 
 ## Installing dependencies
 
-Install pandas and numpy for dataframe and mathenatical features
+Install pandas and numpy for dataframe and mathematical features
 ```
 pip3 install pandas
 pip3 install numpy
