@@ -1,6 +1,6 @@
-#LSTM Based NLU chatbot with randomized responses
+# LSTM Based NLU chatbot with randomized responses
 
-##Installing dependencies
+## Installing dependencies
 Install pandas and numpy for dataframe and mathenatical features
 '''
 pip3 install pandas
@@ -25,7 +25,7 @@ pip3 install jamspell
 '''
 All required dependencies have now been installed.
 
-##Running the model
+## Running the model
 Type 'python3 out.py' and wait a couple of seconds till it shows
 >Started...
 >user:
