@@ -1,5 +1,5 @@
 import torch
-import md
+from md import Classifier_net
 import sys
 from keras.preprocessing.text import Tokenizer
 from keras_preprocessing.sequence import pad_sequences
@@ -24,8 +24,13 @@ def weather(city):
     print("Time: "+data[0])
     print("Temperature: "+temp)
 
+if torch.cuda.is_available():
+	device = 'cuda'
+else:
+	device = 'cpu'
+
 FILE = "data.pth"
-data = torch.load(FILE,map_location='cpu')
+data = torch.load(FILE,map_location=device)
 
 corrector = jamspell.TSpellCorrector()
 corrector.LoadLangModel('en.bin')
@@ -61,7 +66,7 @@ x_train = np.array(x_train)
 tokens = Tokenizer(num_words=len(words))
 tokens.fit_on_texts(x_train)
 
-my_model = md.Classifier_net(inputs,output,hidden,1,1).to('cuda')
+my_model = Classifier_net(inputs,output,hidden,1,1).to(device)
 my_model.load_state_dict(state_model)
 my_model.eval()
 
@@ -87,7 +92,7 @@ while True:
 	arr.append(sentence)
 	sequence = tokens.texts_to_sequences(arr)
 	val = pad_sequences(sequence, maxlen=20)
-	out = my_model(torch.LongTensor(val).to('cuda'))
+	out = my_model(torch.LongTensor(val).to(device))
 	out_cpu = out.cpu()
 	idx = torch.argmax(out_cpu).numpy()
 	prob = torch.softmax(out_cpu,dim=1)
