@@ -181,11 +181,10 @@
         "tag": "rude",
         "patterns": ["fuck you","fuck me","you're stupid","idiot","you dumbfuck","asshole","you're an idiot","fucking bitch","bitch"],
         "responses": [
-          "Fuck you!",
-          "Bitch ass hoe!",
-          "You bloody dumbfuck",
-          "Even your mom does'nt love you",
-          "Cunt."
+          "Rude",
+          "Please be nice.",
+          "That was not very nice.",
+          "That hurt."
         ]
       },
       {
