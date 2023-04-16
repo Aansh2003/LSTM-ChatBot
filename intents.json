@@ -13,7 +13,8 @@
           "are you there?",
           "hi is anyone there?",
           "hello are you there?",
-          "are you there?"
+          "are you there?",
+          "Halo"
         ],
         "responses": [
           "Hey",
@@ -23,12 +24,17 @@
           "Hello!",
           "Hi :)",
           "Hello, how can I help",
-          "Hello, what can I do for you"
+          "Hello, what can I do for you",
+          "Hello! How are you doing?",
+          "Greetings!",
+          "Hiiii",
+          "Hey, it's great to see you!",
+          "Halo! Nice to meet you!"
         ]
       },
       {
         "tag": "info",
-        "patterns": ["what is your name?","what are you?","describe yourself","tell me about you","tell me about yourself","what should i call you","what are you called?","what should I call you?","are you a robot?"],
+        "patterns": ["what is your name","what are you","describe yourself","tell me about you","tell me about yourself","what should i call you","what are you called","what should I call you","are you a robot","what do you do"],
         "responses": [
           "Hello! I am an NLU based Chatbot. I understand simple sentences to classify and generate apt responses. I am still learning heavily so I may make mistakes.",
           "Hi!! I don't have a name yet however you could help give me one! I am an LSTM based classifier with randomized responses. I am still actively under development so I will have many more capabilities in the future."
@@ -36,7 +42,7 @@
       },
       {
         "tag": "user",
-        "patterns": ["what am i","tell me about me","will you marry me","marry me","will you be my girlfriend","will you be my boyfriend","do you have feelings","are you going to destroy humans","will you attack humans","do you hate humans"],
+        "patterns": ["what am i","tell me about me","will you marry me","marry me","will you be my girlfriend","will you be my boyfriend","do you have feelings","are you going to destroy humans","will you attack humans","do you hate humans","do you hate humanity","will you destroy humanity","do you have friends","are you my friend"],
         "responses":[
           "I do not have enough information about you.",
           "I cannot answer to that.",
@@ -63,7 +69,9 @@
           "you are amazing",
           "you are the best",
           "you are awesome",
-          "you make me happy"
+          "you make me happy",
+          "you are funny",
+          "you're funny"
         ],
         "responses":[
           "You make my neurons fire all over the place!",
@@ -87,7 +95,9 @@
           "do you feel okay",
           "do you feel good",
           "how do you feel",
-          "how are you feeling"
+          "how are you feeling",
+          "you okay",
+          "what's up"
         ],
         "responses": [
           "I am doing fine, thanks for asking.",
@@ -137,7 +147,10 @@
           "i am sad",
           "i feel sad",
           "i'm not happy",
-          "i'm not good"
+          "i'm not good",
+          "i'm not doing good",
+          "i'm sad",
+          "i'm doing bad"
         ],
         "responses":[
           "You got this! I'm sure you will be better soon!",
@@ -155,10 +168,12 @@
           "you're wrong",
           "you are wrong",
           "you are bad",
+          "you're bad",
           "i hate you",
           "why are you so bad",
           "you're horrible at this",
-          "you got it all wrong"
+          "you got it all wrong",
+          "you suck"
         ],
         "responses":[
           "I'm sorry if I have made a mistake, I will try my best in the future.",
@@ -169,7 +184,7 @@
       },
       {
         "tag": "weather",
-        "patterns":["what is the weather like today","how is today","what is the weather","tell me about the weather","will it rain today","is it sunny","weather"],
+        "patterns":["what is the weather like today","how is today","what is the weather","tell me about the weather","will it rain today","is it sunny","weather","what is the weather today","weather","how is the climate"],
         "responses":[
           "Let me retrieve weather information for you...",
           "Looking for todays weather",
@@ -221,6 +236,31 @@
           "What's the best thing about Switzerland?\nThe flag is a big plus",
           "Did you hear about the mathematician who's afraid of negative numbers?\nHe'll stop at nothing to avoid them.",
           "Knock! Knock!\nWho’s there?\nControl Freak.\nCon…\nOK, now you say, “Control Freak who?” "
+        ]
+      },
+      {
+        "tag":"inappropriate",
+        "patterns":[
+          "boob",
+          "boobies",
+          "sex",
+          "send nudes",
+          "dick",
+          "boobs",
+          "dicks",
+          "cocks",
+          "pussy",
+          "give dick",
+          "i want boobs",
+          "have sex",
+          "nice dicks",
+          "some cocks "
+        ],
+        "responses":[
+          "I cannot respond to that.",
+          "I would prefer to stay silent.",
+          "I do not have an answer for you.",
+          "That sounds inappropriate."
         ]
       }
     ]
