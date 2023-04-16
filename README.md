@@ -28,12 +28,22 @@ pip3 install jamspell
 ```
 All required dependencies have now been installed.
 
-## Running the model
+### Additional dependencies for flask server deployment
+```
+pip3 install Flask
+```
+
+## Running the model from command line
 Type `python3 out.py` and wait a couple of seconds till it shows
 >Started...  
 >user:
 
 Here is an example output:
 ![Screenshot from 2023-04-12 20-18-48](https://user-images.githubusercontent.com/96300383/231521115-61341907-e2fd-4901-8d8f-1c510d9d9009.png)
+
+## Running the model using a flask server
+Type `python3 flask_test.py` and wait till the server has been deployed. A link will be displayed like the following
+> Running on http://127.0.0.1:5000
+Copy the link at paste it on your browser to deploy the website.
 
 Currently working on a better deployment method for the model with a proper front-end and also further increasing the number of classes and accuracy of the model and also adding numerous other responses.
