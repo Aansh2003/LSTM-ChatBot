@@ -43,7 +43,8 @@ Here is an example output:
 
 ## Running the model using a flask server
 Type `python3 flask_test.py` and wait till the server has been deployed. A link will be displayed like the following
-> Running on http://127.0.0.1:5000
+> Running on http://127.0.0.1:5000   
+
 Copy the link at paste it on your browser to deploy the website.
 
 Currently working on a better deployment method for the model with a proper front-end and also further increasing the number of classes and accuracy of the model and also adding numerous other responses.
