@@ -46,5 +46,7 @@ Type `python3 flask_test.py` and wait till the server has been deployed. A link 
 > Running on http://127.0.0.1:5000   
 
 Copy the link at paste it on your browser to deploy the website.
+Here is an example output:
+![image](https://user-images.githubusercontent.com/96300383/232273757-b65c5486-49a1-4aa4-a2f6-50efea661fc6.png)
 
 Currently working on a better deployment method for the model with a proper front-end and also further increasing the number of classes and accuracy of the model and also adding numerous other responses.
