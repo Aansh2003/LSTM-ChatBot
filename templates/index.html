@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chatbot Page</title>
+	<style>
+		body {
+			background-color: #f2f2f2;
+			font-family: Arial, sans-serif;
+		}
+		.container {
+			max-width: 800px;
+			margin: 0 auto;
+			padding: 20px;
+			background-color: #fff;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+			border-radius: 10px;
+		}
+		.chat-window {
+			height: 400px;
+			overflow-y: scroll;
+			margin-bottom: 10px;
+			padding: 10px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			background-color: #fff;
+		}
+		.bot {
+			background-color: #eee;
+		}
+		p {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			margin-bottom: 10px;
+			padding: 10px;
+			background-color: #eee;
+			border-radius: 10px;
+			max-width: 60%;
+		}
+		.user {
+			position: relative;
+			right: -290px;
+			background-color: #4a7ac4;
+			color: whitesmoke;
+		}
+		.input-container {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			margin-bottom: 10px;
+		}
+		.input-container input[type=text] {
+			flex: 1;
+			padding: 10px;
+			border-radius: 5px;
+			border: none;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+		}
+		.input-container input[type=submit] {
+			margin-left: 10px;
+			padding: 10px;
+			border-radius: 5px;
+			border: none;
+			background-color: #4CAF50;
+			color: #fff;
+			font-weight: bold;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<div id="find" class="container">
+		<h1>Chatbot</h1>
+		<div class="chat-window">
+		</div>
+		<form class="input-container" method="POST">
+			<input name="text" type="text" placeholder="Type your message...">
+			<input type="submit" value="Send">
+		</form>
+	</div>
+</body>
+</html>
